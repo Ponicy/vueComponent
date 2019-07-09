@@ -1,0 +1,7 @@
+@function px2rem($px){
+	@return $px*320/$designWidth/20 + rem;
+}
+$designWidth : 750;
+
+/*主题色调*/
+$baseColor: #57aaff;

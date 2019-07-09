@@ -1,0 +1,78 @@
+/*
+时间: 2018年9月4号
+作者: ponicy
+用途: 初始化浏览器样式
+*/
+@import './px2rem.scss';
+
+body, div, p, h1, h2, h3, span, a, ul, ol, li, article, section, i, em, button, header, footer, nav, input, area, textarea{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin:0;
+	padding: 0;
+}
+body {
+	background: #fff;
+	font-family:"PingFang SC", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Source Han Sans", "Noto Sans CJK Sc", "Microsoft YaHei", "Microsoft Jhenghei", sans-serif;
+	font-size: px2rem(28);
+	line-height: 1.1;
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+	-webkit-overflow-scrolling: touch;
+	color: #333;
+	overflow-x: hidden;
+}
+html,body{
+	height: 100%!important;
+	/*overflow: hidden;*/
+}
+
+ul, ol, li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: #333;
+}
+a, button, input { /*去除点击高亮*/
+	outline: none;
+	box-shadow: none;
+	-webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+img, input, textarea, span, i, a, em, button {
+	vertical-align: middle;
+}
+
+img{
+	border:  none;
+}
+
+input, textarea {
+	outline: none;
+	box-shadow: none;
+}
+input:focus, textarea:focus, button:focus {
+	outline: none;
+	box-shadow: none;
+}
+input:active, textarea:active {
+	outline: none;
+	box-shadow: none;
+}
+
+/*输入框值空提示红色*/
+.text-place ::-moz-placeholder { color: #FF0000!important; }
+.text-place ::-webkit-input-placeholder { color:#FF0000!important; }
+.text-place :-ms-input-placeholder { color:#FF0000!important; }
+
+
+/*删除input输入框数字类型出现的增减按钮样式*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+	-webkit-appearance: none !important;
+	margin: 0;
+}
+
+
